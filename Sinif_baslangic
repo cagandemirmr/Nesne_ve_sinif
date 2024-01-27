@@ -1,0 +1,4 @@
+class Araba(marka):
+    model=marka
+    def metot(self):
+        self.marka("mercedes")
