@@ -1,0 +1,13 @@
+def a():
+    pass
+#Fonksiyonlarda olduğu gibi sınıflarda da içi boş olduğunda pass kullanılır.
+
+class araba:
+    pass
+
+#self class ın içerisindeki objeyi ifade eder.Class ın altındaki fonksiyonlara metod denir.
+
+class hayvan(cins):
+    tur=cins
+    def metot(self):
+        self.cins="balıklar"
