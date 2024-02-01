@@ -1,0 +1,16 @@
+#_init_ ile başlangıç değişkeni atayabiliriz.
+class Araba():
+    def __init__(self,model,marka,renk): #Metot
+        self.model=model
+        self.marka=marka
+        self.renk=renk
+    def aracBilgisi(self):           #Metodlarda her zaman self ibaresi kullanılması gereklidir.
+        print("markası:",self.marka)
+        print("model:",self.model)
+        print("renk:",self.renk)
+
+
+
+Taksi=Araba(2020,"FIAT","Kırmızı")
+
+Taksi.aracBilgisi()
