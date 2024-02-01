@@ -1,0 +1,9 @@
+class hayvan():
+    pass
+class araba():
+    pass
+At=hayvan()
+Horoz=hayvan()
+
+Taksi=araba()
+Kamyon=araba()
