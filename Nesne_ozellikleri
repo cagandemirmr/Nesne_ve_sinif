@@ -1,0 +1,15 @@
+#_init_ ile başlangıç değişkeni atayabiliriz.
+class Araba():
+    def __init__(self,model,marka,renk):
+        self.model=model
+        self.marka=marka
+        self.renk=renk
+
+Taksi=Araba(2020,"FIAT","Kırmızı")
+
+Taksi.model=2022
+#Nesnenin tüm özelliklerini değiştirebiliriz.
+
+#print(Taksi.model)    
+
+Kamyon=Araba(2012,"Man","Siyah")
