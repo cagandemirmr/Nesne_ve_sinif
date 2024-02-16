@@ -27,3 +27,78 @@ jim.Sound("Woof")
 jack.Sound("Woof")
 
 print(miles,"\n",buddy,"buddy","\n",jim,"\n",jack,"\n")
+-------------------
+
+
+class Dog:
+    def __init__(self,name, age):
+      self.name = name
+      self.age = age
+
+
+    def Sound(self,sound):
+      self.sound = sound
+      return f"barks hav-hav"
+
+    def __str__(self):
+      return f"{self.name} is and {self.age} years old. And barks like how how "
+
+
+class JackRussellTerrier(Dog):
+    def speak(self,sound):
+        self.sound = sound
+        return f"{self.main} barks: {self.sound}"
+
+class Dachshund(Dog):
+    pass
+
+class Bulldog(Dog):
+    pass
+
+dog1 =Dog("Fucky",2)
+
+
+print(type(dog1))
+
+miles = JackRussellTerrier("Miles", 4)
+buddy = Dachshund("Buddy", 9)
+jack = Bulldog("Jack", 3)
+jim = Bulldog("Jim", 5)
+
+
+
+print(miles,"\n",buddy,"buddy","\n",jim,"\n",jack,"\n")
+class Dog:
+    def __init__(self,name, age):
+      self.name = name
+      self.age = age
+
+
+    def Sound(self,sound="hav-hav"):
+      self.sound = sound
+      return f"barks {self.sound}"
+
+    def __str__(self):
+      return f"{self.name} is and {self.age} years old. And barks like how how "
+
+class JackRussellTerrier(Dog):
+    def Sound(self,sound="Arf"):
+        self.sound = sound
+        return super().Sound(sound)
+
+class Dachshund(Dog):
+    pass
+
+class Bulldog(Dog):
+    pass
+
+dog1 =Dog("Fucky",2)
+
+
+print(type(dog1))
+
+miles = JackRussellTerrier("Miles", 4)
+buddy = Dachshund("Buddy", 9)
+jack = Bulldog("Jack", 3)
+jim = Bulldog("Jim", 5)
+print(miles.Sound())
