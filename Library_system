@@ -1,0 +1,64 @@
+
+class Library:
+    def __init__(self, bfile):
+        self.bfile = bfile
+#sadece init fonksiyonuna paremetreler belirlenir.
+    def file_opening(self):
+        self.bfile = open("book.txt")
+
+    def list_book(self,Book_list):
+        self.Book_list = []
+        self.bfile=open("book.txt")
+        lines = self.bfile.splitlines()
+        for line in lines:
+            Book_list.append(line)
+
+        '''for index, index in enumerate(lines,start=1):
+            result_dict[f"list {index}"]=[book]
+        print(book1) #Belki enumerate e ihtiyaç duyulmayabilir.'''
+#enumerate ile her bir item için bir değer sağlamış oluruz.
+
+    def add_book(self,file,title,author,date,page):
+        self.title = input("Enter the title of the book: ")
+        self.author = input("Enter the author of the book: ")
+        self.date =int(input("Enter the first release date of the book: "))
+        self.page = int(input("Enter the page amount: "))
+        self.bfile=self.bfile.append(f"{self.title}.{self.author}.{self.date}.{self.page}")
+        return self.file
+
+    def remove_book(self,title,Book_list):
+        self.title = input("Enter the title of the book:  ")
+        self.bfile=open("book.txt","o")
+        self.Book_list.append(self.title)
+        self.Book_list.remove(self.Book_list.find(self.title))
+        for element in self.bfile:
+            self.bfile.remove(element)
+        for line in self.Book_list:
+            self.bfile.append(line)
+        return self.bfile
+
+    def lib():
+        print("***MENU***")
+        print("1)List Books")
+        print("2)Add Books")
+        print("3)Remove Book")
+
+        choice = input("Enter your choice: ")
+
+    if choice == "1":
+      entered_listing=list_book()
+
+
+    elif choice == "2":
+      entered_adding=add_book()
+        
+
+    elif choice == "3":
+      entered_removing=remove_book()
+    else:
+        print("Invalid choice. Please try again.")
+        lib()
+
+
+if __name__ == "__lib__":
+    main()
